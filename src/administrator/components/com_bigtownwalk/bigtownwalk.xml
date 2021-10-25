@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.10" method="upgrade">
+	<name>com_bigtownwalk</name>
+	<author>Chris Davenport</author>
+	<creationDate>##DATE##</creationDate>
+	<copyright>(C) ##YEAR## Davenport Technology Services. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE</license>
+	<authorEmail>chris.davenport@davenporttechnology.com</authorEmail>
+	<authorUrl>www.davenporttechnology.com</authorUrl>
+	<version>##VERSION##</version>
+	<description>COM_BIGTOWNWALK_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall/mysql/utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/utf8</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="components/com_bigtownwalk">
+		##FRONTEND_COMPONENT_FILES##
+	</files>
+
+	<languages folder="language">
+		##FRONTEND_LANGUAGE_FILES##
+	</languages>
+
+	<media folder="media">
+	</media>
+
+	<administration>
+		<menu>COM_BIGTOWNWALK_ADMIN_MENU_TITLE</menu>
+
+		<files folder="administrator/components/com_bigtownwalk">
+			##BACKEND_COMPONENT_FILES##
+		</files>
+
+		<languages folder="administrator/language">
+			##BACKEND_LANGUAGE_FILES##
+		</languages>
+	</administration>
+
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.7" method="upgrade">
+	<name>pkg_bigtownwalk</name>
+	<packagename>bigtownwalk</packagename>
+	<creationDate>##DATE##</creationDate>
+	<packager>Chris Davenport</packager>
+	<copyright>Copyright (C) ##YEAR## Davenport Technology Services. All rights reserved.</copyright>
+	<packageremail>chris.davenport@davenporttechnology.com</packageremail>
+	<packagerurl>www.davenporttechnology.com</packagerurl>
+	<author>Chris Davenport</author>
+	<authorEmail>chris.davenport@davenporttechnology.com</authorEmail>
+	<authorUrl>www.davenporttechnology.com</authorUrl>
+	<version>##VERSION##</version>
+	<license>GNU General Public License version 3 or later; see LICENSE</license>
+	<description>PKG_BIGTOWNWALK_XML_DESCRIPTION</description>
+	<blockChildUninstall>true</blockChildUninstall>
+
+	<files>
+		<!-- The id for each extension is the element stored in the DB -->
+		<file type="component" id="com_bigtownwalk">com_bigtownwalk.zip</file>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.pkg_bigtownwalk.sys.ini</language>
+	</languages>
+
+    <updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" name="Davenport Technology Services Update Site"></server>
+	</updateservers>
+
+</extension>

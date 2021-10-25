@@ -1,0 +1,46 @@
+h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
+h2 { text-decoration: underline; }
+li { margin: 10px 0; }
+.toc {
+	background-color: #f9f9f9;
+	border: 1px solid #aaaaaa;
+	display: inline-block;
+	float: right;
+	margin: 0 0 0 10px;
+	padding: 0.5em 1em;
+}
+.toc h2 {
+	margin: 0 0 8px 0;
+	text-decoration: none;
+}
+.toc ul {
+	margin: 0;
+	padding: 0;
+}
+.toc li {
+	margin: 3px 0 3px 1.5em;
+}
+.toc a {
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+.note,
+.warning {
+	background-color: #f9f9f9;
+	display: inline-block;
+	margin: 0 0 10px 0;
+	padding: 0.5em 1em;
+	width: 100%;
+}
+.note {
+	border: 1px solid #00ff00;
+}
+.warning {
+	border: 1px solid #ff0000;
+}
+
+caption {
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}

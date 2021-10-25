@@ -1,0 +1,26 @@
+{
+    "name"       : "chrisdavenport/bigtownwalk",
+    "description": "Code for the Big Town Walk",
+    "license"    : "GPL-2.0+",
+    "config": {
+        "platform": {
+            "php": "7.0.0"
+        }
+    },
+    "require"    : {
+        "php": ">=7.0.0",
+        "joomla/database": "~1.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2",
+        "joomla-projects/joomla-browser": "v3.6.5.1",
+        "consolidation/robo": "^1.0.0",
+        "joomla-projects/robo": "~0",
+        "joomla-projects/selenium-server-standalone": "v3.1.0",
+        "fzaninotto/faker": "^1.6",
+        "joomla-projects/jorobo": "~0.6",
+        "behat/gherkin": "^4.4.1",
+        "flow/jsonpath": ">0.2",
+        "vortrixs/joomla-namespace-checker": "^1.3"
+    }
+}
