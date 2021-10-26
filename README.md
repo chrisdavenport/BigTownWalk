@@ -108,7 +108,7 @@ As a matter of policy pull requests will only be accepted if they pass all these
 Note that the unit tests are not currently run automatically on commit because I can't
 get the MySQL server to work in Github Actions.  A fix for this would be welcome.
 
-## Bitbucket Pipelines
+## Github Actions
 The environment used for the pipeline can also be created locally in Docker as follows:
 
 ```
