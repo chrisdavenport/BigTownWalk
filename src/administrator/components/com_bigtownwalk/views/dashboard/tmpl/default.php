@@ -3,7 +3,7 @@
  * @package     ChrisDavenport
  * @subpackage  BigTownWalk
  *
- * @copyright   Copyright (C) 2021 Davenport Technology Services. All rights reserved.
+ * @copyright   Copyright (C) 2022 Davenport Technology Services. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE
  */
 
@@ -39,8 +39,15 @@ JHtmlBehavior::core();
 HTMLHelper::_('behavior.multiselect');
 HTMLHelper::_('formbehavior.chosen', '.multipleAccessLevels', null, array('placeholder_text_multiple' => Text::_('JOPTION_SELECT_ACCESS')));
 HTMLHelper::_('formbehavior.chosen', 'select');
+
+// Add sidebar.
+BigtownwalkHelperAdmin::addSubmenu('dashboard');
 ?>
 <form action="<?php echo Route::_('index.php?option=com_bigtownwalk&view=dashboard'); ?>" method="post" name="adminForm" id="adminForm">
+	<div id="j-sidebar-container" class="span2">
+		<?php echo JHtmlSidebar::render(); ?>
+	</div>
+
 	<div id="j-main-container" class="span12">
 
 		Hello World!
