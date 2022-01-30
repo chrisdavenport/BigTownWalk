@@ -13,5 +13,7 @@ CREATE TABLE `#__bigtownwalk_walks` (
 	`publish_up` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 	`publish_down` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 	`access` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+    `checked_out` INT(11) NOT NULL,
+    `checked_out_time` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 	PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 0 DEFAULT CHARSET = utf8mb4;

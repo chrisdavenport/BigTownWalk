@@ -63,7 +63,11 @@ final class BigtownwalkModelWalks extends ListModel
 
 			// Join to view groups.
 			->select('vg.title AS access_level')
-			->leftJoin('#__viewlevels AS vg ON vg.id = a.access');
+			->leftJoin('#__viewlevels AS vg ON vg.id = a.access')
+
+			// Join over the users for the checked out user.
+			->select('uc.name AS editor')
+			->leftJoin('#__users AS uc ON uc.id = a.checked_out');
 
 		// Filter by published state.
 		$published = $this->getState('filter.published');

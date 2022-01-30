@@ -35,7 +35,7 @@ ToolbarHelper::title(Text::_('COM_BIGTOWNWALK_ADMIN_MENU_TITLE'));
 // Show the New toolbar button but only if user has sufficient permission.
 if ($this->canDo->get('core.create'))
 {
-	ToolbarHelper::addNew('form.add');
+	ToolbarHelper::addNew('walk.add');
 }
 
 // Show Publish, Unpublish and Archive buttons but only if user has sufficient permission.

@@ -53,7 +53,7 @@ final class BigtownwalkViewWalks extends HtmlView
 	 */
 	public function display($tpl = null)
 	{
-		$this->walks		 = $this->get('Walks');
+		$this->walks		 = $this->get('Items');
 		$this->pagination	 = $this->get('Pagination');
 		$this->state		 = $this->get('State');
 		$this->filterForm	 = $this->get('FilterForm');
