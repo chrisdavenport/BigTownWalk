@@ -3,7 +3,7 @@
  * @package     ChrisDavenport
  * @subpackage  BigTownWalk
  *
- * @copyright   Copyright (C) 2021 Davenport Technology Services. All rights reserved.
+ * @copyright   Copyright (C) 2022 Davenport Technology Services. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE
  */
 
@@ -13,6 +13,8 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ContentHelper;
 use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\Language\Text;
+
+JLoader::registerPrefix('BigtownwalkHelper', JPATH_COMPONENT_ADMINISTRATOR . '/helper');
 
 // Is user allowed access to the backend of this component?
 if (!ContentHelper::getActions('com_bigtownwalk')->get('core.manage'))
