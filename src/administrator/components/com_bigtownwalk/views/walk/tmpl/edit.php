@@ -66,7 +66,7 @@ Factory::getApplication()->getDocument()->addScriptDeclaration('
 
 		if (jQuery("#jform_title").hasClass("invalid"))
 		{
-			msg.push("The walk must have a title.");
+			msg.push("' . Text::_('COM_BIGTOWNWALK_WALK_MUST_HAVE_TITLE') . '");
 		}
 
 		// Show all error messages.
