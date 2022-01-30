@@ -15,14 +15,14 @@ use Joomla\CMS\Language\Text;
 /* @var  array  $displayData  Array of data passed into the layout. */
 extract($displayData);
 
-/* @var  array        $walks       Array of walk items. */
-/* @var  JPagination  $pagination  Pagination object. */
-/* @var  string       $order       Field that table is ordered by. */
-/* @var  string       $direction   Direction of ordering. */
-/* @var  JUser        $user        User object. */
-/* @var  JObject      $canDo       User permissions. */
-/* @var  integer      $rownumber   Row number in table. */
-/* @var  stdClass     $walk      walk object. */
+/* @var  array       $walks       Array of walk items.            */
+/* @var  Pagination  $pagination  Pagination object.              */
+/* @var  string      $order       Field that table is ordered by. */
+/* @var  string      $direction   Direction of ordering.          */
+/* @var  User        $user        User object.                    */
+/* @var  CMSObject   $canDo       User permissions.               */
+/* @var  integer     $rownumber   Row number in table.            */
+/* @var  stdClass    $walk        Walk object.                    */
 $walk		= $displayData['walk'];
 $rownumber	= $displayData['rownumber'];
 $order	    = $displayData['order'];

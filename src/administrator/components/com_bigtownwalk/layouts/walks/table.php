@@ -18,8 +18,8 @@ use Joomla\CMS\Pagination\Pagination;
 /* @var  Pagination $pagination   Pagination object.              */
 /* @var  string     $order        Field that table is ordered by. */
 /* @var  string     $direction    Direction of ordering.          */
-/* @var  JUser      $user         User object.                    */
-/* @var  JObject    $canDo        User permissions.               */
+/* @var  User       $user         User object.                    */
+/* @var  CMSObject  $canDo        User permissions.               */
 $walks      = $displayData['walks'];
 $order	    = $displayData['order'];
 $direction  = $displayData['direction'];

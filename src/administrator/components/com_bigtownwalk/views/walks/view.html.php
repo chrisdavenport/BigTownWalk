@@ -26,7 +26,7 @@ final class BigtownwalkViewWalks extends HtmlView
 	// Model state object.
 	protected $state;
 
-	// JForm object for list filtering.
+	// Form object for list filtering.
 	public $filterForm;
 
 	// Array of currently active list filters.
