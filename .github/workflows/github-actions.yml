@@ -1,0 +1,30 @@
+name: github-actions
+on: [push]
+jobs:
+  check-code-style:
+    runs-on: ubuntu-latest
+    container:
+      image: chrisdavenport/joomla-code-style
+    steps:
+      - run: echo "This job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "Repository is ${{ github.repository }}."
+      - run: echo "Branch is ${{ github.ref }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Check repository environment
+        run: |
+          pwd
+          ls -la
+          php -v
+      - name: Install composer
+        run: composer install
+      - name: Run code style tests
+        run: |
+          vendor/bin/phpcs \
+          --report=full \
+          --extensions=php -p \
+          --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Joomla \
+          --ignore=*/tmpl/*,*/layouts/*,*/vendor/* src
+      - name: Run namespace check
+        run: vendor/bin/robo run:namespace
+      - run: echo "Completed with status ${{ job.status }}."
