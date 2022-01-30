@@ -1,5 +1,14 @@
 # BigTownWalk
-Code to support the Big Town Walk.
+The next Shrewsbury Big Town Walk will take place this year on Friday 15th to Monday 18th April 2022.
+
+This code is the public repository for the custom Joomla
+component that will support the event.  The public website is here: http://bigtownwalk.org.uk/ 
+
+Most of the code is written in PHP with JavaScript used to power the Google Maps.
+Feel free to look at the code, play with the website and report issues.
+
+Code and/or documentation contributions are welcome.
+Please submit pull requests against the staging branch. 
 
 # Essentials
 
