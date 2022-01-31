@@ -1,0 +1,34 @@
+/**
+ * @package     ChrisDavenport
+ * @subpackage  BigTownWalk
+ *
+ * @copyright   Copyright (C) 2022 Davenport Technology Services. All rights reserved.
+ * @license     GNU General Public License version 3 or later; see LICENSE
+ */
+.header-content h1 {
+	text-transform: none;
+}
+#scrollUp {
+	background-image: url("../images/top.png");
+}
+section#testimonial-area {
+	margin-top: 50px;
+}
+#section4 {
+	margin-top: 50px;
+}
+
+.equal {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+	.row.equal {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.blog-content {
+	height: 100%;
+}
