@@ -9,6 +9,7 @@ CREATE TABLE `#__bigtownwalk_walks` (
 	`description` TEXT NOT NULL,
 	`modified` DATETIME NULL DEFAULT NULL,
 	`attribs` TEXT NOT NULL,
+    `ordering` int(11) NOT NULL,
 	`state` TINYINT(3) NOT NULL DEFAULT '0',
 	`publish_up` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 	`publish_down` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',

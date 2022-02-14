@@ -18,6 +18,7 @@ section#testimonial-area {
 	margin-top: 50px;
 }
 
+/* Equal height blocks */
 .equal {
 	display: flex;
 	display: -webkit-flex;
@@ -26,9 +27,36 @@ section#testimonial-area {
 @media (min-width: 768px) {
 	.row.equal {
 		display: flex;
+		display: -webkit-flex;
 		flex-wrap: wrap;
 	}
 }
 .blog-content {
 	height: 100%;
+}
+.blog-content p {
+	padding: 0;
+}
+.blog-content .feature-content-description {
+	padding: 0 20px 35px;
+}
+
+.testimonial-content {
+	height: 500px;
+}
+.testimonial-content p {
+	padding: 0;
+}
+.testimonial-content .feature-content-description {
+	padding: 0 20px 35px;
+}
+.testimonial-content .content-link {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 45%;
+}
+
+.walks-section {
+	margin-top: 50px;
 }

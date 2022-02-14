@@ -159,6 +159,30 @@ final class BigtownwalkModelWalk extends AdminModel
 	}
 
 	/**
+	 * Prepare and sanitise the table prior to saving.
+	 *
+	 * @param   Table  $table  Table object.
+	 *
+	 * @return  void
+	 *
+	 * @since	__DEPLOY_VERSION__
+	 */
+	protected function prepareTable($table)
+	{
+		if (empty($table->id))
+		{
+			// Set ordering to the last item if not set
+			if (@$table->ordering === '')
+			{
+				$db = Factory::getDbo();
+				$db->setQuery('SELECT MAX(ordering) FROM #__bigtownwalk_walks');
+				$max = $db->loadResult();
+				$table->ordering = $max + 1;
+			}
+		}
+	}
+
+	/**
 	 * Method to save the walk data.
 	 *
 	 * @param   array  $data  The walk data.

@@ -70,7 +70,10 @@ $menu = $app->getMenu();
 $homePage = $menu->getActive() === $menu->getDefault();
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html
+	lang="<?php echo $this->language; ?>"
+	dir="<?php echo $this->direction; ?>"
+	>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,13 +101,7 @@ $homePage = $menu->getActive() === $menu->getDefault();
 				</button>
 			</div>
 			<div class="single-page-nav sticky-wrapper" id="tmNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href="#section1">Homepage</a></li>
-					<li><a href="#section2">About Us</a></li>
-					<li><a href="#section3">Services</a></li>
-					<li><a href="#section4">Contact</a></li>
-					<li><a href="http://www.google.com/+templatemo" class="external" title="+templatemo page" target="_blank">External</a></li>
-				</ul>
+				<jdoc:include type="modules" name="bigtownwalk-top" style="xhtml" />
 			</div>
 		</div>
 	</nav>
@@ -116,7 +113,7 @@ $homePage = $menu->getActive() === $menu->getDefault();
 					<div class="col-sm-12 text-center">
 						<div class="header-content">
 							<h1>Shrewsbury Big Town Walk 2022</h1>
-							<h4>In support of the Lingen Davies charity</h4>
+							<h4>In support of the Lingen Davies Cancer Fund</h4>
 						</div>
 					</div>
 				</div>
@@ -128,33 +125,8 @@ $homePage = $menu->getActive() === $menu->getDefault();
 		<!-- Start Feature Area - Three blocks in a row. -->
 		<section id="feature-area" class="about-section">
 			<div class="container">
-				<div class="row text-center inner">
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="templates/bigtownwalk/images/1-1.jpg" alt="Image">
-							<h2 class="feature-content-title green-text">Bootstrap v3.3.6</h2>
-							<p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
-							</p>
-							<a href="#" class="feature-content-link green-btn">button green</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="templates/bigtownwalk/images/1-2.jpg" alt="Image">
-							<h2 class="feature-content-title blue-text">Responsive Design</h2>
-							<p class="feature-content-description">Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by <a href="http://unsplash.com" target="_parent">Unsplash</a>. Thank you for visiting our website. Please come again!</p>
-							<a href="#" class="feature-content-link blue-btn">See Details</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="templates/bigtownwalk/images/1-3.jpg" alt="Image">
-							<h2 class="feature-content-title red-text">Parallax Layout</h2>
-							<p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
-							</p>
-							<a href="#" class="feature-content-link red-btn">Button Red</a>
-						</div>
-					</div>
+				<div class="row mb-4 text-center inner">
+					<jdoc:include type="modules" name="home-section-2" style="col3" />
 				</div>
 			</div>
 		</section>
@@ -163,27 +135,8 @@ $homePage = $menu->getActive() === $menu->getDefault();
 		<!-- Start Blog Area - Two large blocks in a row. -->
 		<section id="blog-area">
 			<div class="container">
-				<div class="row text-center inner equal">
-					<div class="col-sm-6">
-						<div class="blog-content">
-							<img src="templates/bigtownwalk/images/2-1.jpg" alt="Image">
-							<h2>Two Column Left Side</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
-								Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
-							<br>
-
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="blog-content">
-							<img src="templates/bigtownwalk/images/2-2.jpg" alt="Image">
-							<h2>Two Column Right Side</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
-								Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
-							<span><a href="#">read more</a></span><br>
-							<p id="blofr"></p>
-						</div>
-					</div>
+				<div class="row mb-4 text-center inner equal">
+					<jdoc:include type="modules" name="home-section-2b" style="col2" />
 				</div>
 			</div>
 		</section>
@@ -197,10 +150,11 @@ $homePage = $menu->getActive() === $menu->getDefault();
 				<div class="row">
 					<div class="col-sm-12 text-center inner our-service">
 						<div class="service">
-							<h1>Our Services</h1>
+							<h1>The Walks</h1>
 							<p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
 								felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
-								Etiam a mi quis arcu varius condimentum.</p>
+								Etiam a mi quis arcu varius condimentum.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -208,62 +162,27 @@ $homePage = $menu->getActive() === $menu->getDefault();
 		</section>
 		<!-- End Services Area -->
 
+		<!-- Start Walks Area - Three blocks in a row. -->
+		<section id="walks-area" class="walks-section">
+			<div class="container">
+				<div class="row mb-4 text-center inner">
+					<jdoc:include type="modules" name="bigtownwalks" style="none" />
+				</div>
+			</div>
+		</section>
+		<!-- End Walks Area -->
+
 		<!-- Start Testimonial Area -->
 		<section id="testimonial-area">
 			<div class="container">
 				<!-- Four blocks in a row. -->
-				<div class="row text-center">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="testimonial-content">
-							<img src="templates/bigtownwalk/images/4-1.jpg" alt="Image">
-							<h2>Column One</h2>
-							<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-							<br>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="testimonial-content">
-							<img src="templates/bigtownwalk/images/4-2.jpg" alt="Image">
-							<h2>Column Two</h2>
-							<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-							<a href="#" class="content-link">read it</a>
-							<br>
-							<p id="redd"></p>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="testimonial-content">
-							<img src="templates/bigtownwalk/images/4-3.jpg" alt="Image">
-							<h2>Column Three</h2>
-							<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-							<br>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="testimonial-content">
-							<img src="templates/bigtownwalk/images/4-4.jpg" alt="Image">
-							<h2>Column Four</h2>
-							<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-							<a href="#" class="content-link">details</a>
-							<br>
-							<p id="dets"></p>
-						</div>
-					</div>
+				<div class="row mb-4 text-center inner equal">
+					<jdoc:include type="modules" name="home-section-3" style="col4" />
 				</div>
 
 				<!-- One block in a row. -->
 				<div class="row">
-					<div class="col-lg-12">
-						<div class="tm-box">
-							<img src="templates/bigtownwalk/images/4-5.jpg" alt="Image" class="img-responsive">
-							<div class="tm-box-description">
-								<h2>One Big Column</h2>
-								<p class="tm-box-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium. Vivamus dictum nisi ac fermentum interdum. Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus. Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.</p>
-								<p class="tm-box-p">Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.</p>
-								<a href="#" class="content-link">Read More</a>
-							</div>
-						</div>
-					</div>
+					<jdoc:include type="modules" name="home-section-4" style="col1" />
 				</div>
 			</div>
 		</section>
@@ -280,9 +199,11 @@ $homePage = $menu->getActive() === $menu->getDefault();
 							<h1>contact form</h1>
 							<div class="row">
 								<div class="col-sm-12">
-									<p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
-										felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
-										Etiam a mi quis arcu varius condimentum.</p>
+									<p>
+										If you can't find the information you're looking for on this website,<br>
+										then please feel free to contact us using this form.<br>
+										We'll get back to you as soon as we can.
+									</p>
 								</div>
 							</div>
 
@@ -319,9 +240,13 @@ $homePage = $menu->getActive() === $menu->getDefault();
 			<div class="row text-center">
 				<div class="col-sm-12">
 					<div class="footer-content">
-						<h1>Use it free!</h1>
-						<p>“Conquer is free Bootstrap template from templatemo website.
-							<br>No backlink is required to use this layout.”</p>
+						<h1>Contribute</h1>
+						<p>
+							This website is powered by Free and Open Source software and is freely available for use by other towns.
+							<br>The software behind this website can be found on
+							<a href="https://github.com/chrisdavenport/BigTownWalk" target="_blank">Github</a>.
+							<br>Contributors welcome!
+						</p>
 					</div>
 				</div>
 			</div>
