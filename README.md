@@ -1,11 +1,11 @@
 # BigTownWalk
 The next Shrewsbury Big Town Walk will take place this year on Friday 15th to Monday 18th April 2022.
 
-This code is the public repository for the custom Joomla
-component that will support the event.  The public website is here: http://bigtownwalk.org.uk/ 
+This code is the public repository for the custom Joomla component that will support the event.
+The public website is here: http://bigtownwalk.org.uk/ 
 
 Most of the code is written in PHP with JavaScript used to power the Google Maps.
-Feel free to look at the code, play with the website and report issues.
+Feel free to look at the code, play with the website and report any issues or suggestions for improvement.
 
 Code and/or documentation contributions are welcome.
 Please submit pull requests against the staging branch. 
@@ -54,7 +54,7 @@ Version numbers should follow the [Semantic Versioning](https://semver.org/) sch
 * All bug fix or feature branches should, as a matter of convenience and convention, include
   an issue number where one is available.  For example, __fantastic-new-feature-issue-123__.
 * Release branches begin with the __release__ prefix.  For example, __release-1.2.3__.
-  Only release branches are ever merged into the __master__ branch.
+  Only release branches are ever merged into the __main__ branch.
 
 ## Repository organisation
 All source code can be found in the __/src__ directory.  The organisation of directories within
@@ -105,7 +105,7 @@ code_coverage/index.html
 ## Joomla namespace checker
 This is a script which scans the project directory recursively looking for PHP files
 containing calls to the old pre-namespaced classes (eg. JFactory).
-It currently generates quite a long list, so it hasn't been included in the CI pipeline yet.
+
 Run it with the following command:
 ```
 vendor/bin/robo run:namespace
@@ -195,21 +195,21 @@ Once this file has been uploaded the new release will be publicly available as a
 
 * Check that the Github Actions build and test process completes without error.
 
-* Merge the release branch into the __master__ branch.
+* Merge the release branch into the __main__ branch.
 ```
-	gl switch master
-	git pull origin master
+	gl switch main
+	git pull origin main
 	gl merge release-[x.y.z]
-	git push origin master
+	git push origin main
 ```
 
 * Tag the release in BitBucket by going to the commit and clicking on the __+__ sign on the right-hand side.
   Tags are purely numeric (eg. '2.3.0').
 
-* Update the __staging__ branch to bring it up-to-date with the latest __master__
+* Update the __staging__ branch to bring it up-to-date with the latest __main__
 ```
 	gl switch staging
-	gl merge master
+	gl merge main
 	git push origin staging
 ```
 

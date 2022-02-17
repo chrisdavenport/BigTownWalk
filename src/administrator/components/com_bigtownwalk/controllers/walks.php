@@ -9,7 +9,8 @@
 
 defined('_JEXEC') or die;
 
-use \Joomla\CMS\MVC\Controller\AdminController;
+use Joomla\CMS\MVC\Controller\AdminController;
+use Joomla\CMS\MVC\Model\BaseDatabaseModel;
 
 /**
  * Walks list controller class.
@@ -25,7 +26,7 @@ class BigtownwalkControllerWalks extends AdminController
 	 * @param   string  $prefix  The class prefix. Optional.
 	 * @param   array   $config  Configuration array for model. Optional.
 	 *
-	 * @return  \JModelLegacy|boolean  Model object on success; otherwise false on failure.
+	 * @return  BaseDatabaseModel|boolean  Model object on success; otherwise false on failure.
 	 *
 	 * @since   __DEPLOY_VERSION__
 	 */

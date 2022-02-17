@@ -20,10 +20,13 @@ section#testimonial-area {
 
 /* Equal height blocks */
 .equal {
-	display: flex;
+	display: -webkit-box;
 	display: -webkit-flex;
-	flex-wrap: wrap;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row wrap;
 }
+/*
 @media (min-width: 768px) {
 	.row.equal {
 		display: flex;
@@ -31,6 +34,7 @@ section#testimonial-area {
 		flex-wrap: wrap;
 	}
 }
+ */
 .blog-content {
 	height: 100%;
 }
@@ -41,6 +45,10 @@ section#testimonial-area {
 	padding: 0 20px 35px;
 }
 
+.feature-content {
+	flex: 1;
+	height: 100%;
+}
 .testimonial-content {
 	height: 500px;
 }
@@ -57,6 +65,6 @@ section#testimonial-area {
 	width: 45%;
 }
 
-.walks-section {
-	margin-top: 50px;
+.row-margin-2 {
+	margin-top: 2em;
 }

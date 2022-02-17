@@ -165,9 +165,7 @@ $homePage = $menu->getActive() === $menu->getDefault();
 		<!-- Start Walks Area - Three blocks in a row. -->
 		<section id="walks-area" class="walks-section">
 			<div class="container">
-				<div class="row mb-4 text-center inner">
-					<jdoc:include type="modules" name="bigtownwalks" style="none" />
-				</div>
+				<jdoc:include type="modules" name="bigtownwalks" style="none" />
 			</div>
 		</section>
 		<!-- End Walks Area -->
@@ -236,22 +234,6 @@ $homePage = $menu->getActive() === $menu->getDefault();
 
 	<!-- Start Footer Area -->
 	<footer id="footer-area">
-		<div class="container">
-			<div class="row text-center">
-				<div class="col-sm-12">
-					<div class="footer-content">
-						<h1>Contribute</h1>
-						<p>
-							This website is powered by Free and Open Source software and is freely available for use by other towns.
-							<br>The software behind this website can be found on
-							<a href="https://github.com/chrisdavenport/BigTownWalk" target="_blank">Github</a>.
-							<br>Contributors welcome!
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
