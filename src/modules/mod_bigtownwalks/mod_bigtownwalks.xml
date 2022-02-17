@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.10" client="site" method="upgrade">
+	<name>mod_bigtownwalks</name>
+	<author>Chris Davenport</author>
+	<creationDate>##DATE##</creationDate>
+	<copyright>(C) ##YEAR## Davenport Technology Services. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE</license>
+	<authorEmail>chris.davenport@davenporttechnology.com</authorEmail>
+	<authorUrl>www.davenporttechnology.com</authorUrl>
+	<version>##VERSION##</version>
+	<description>MOD_BIGTOWNWALKS_XML_DESCRIPTION</description>
+	<files>
+		##MODULE_FILES##
+	</files>
+	<languages folder="language">
+		##LANGUAGE_FILES##
+	</languages>
+</extension>

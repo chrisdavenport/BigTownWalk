@@ -1,0 +1,70 @@
+/**
+ * @package     ChrisDavenport
+ * @subpackage  BigTownWalk
+ *
+ * @copyright   Copyright (C) 2022 Davenport Technology Services. All rights reserved.
+ * @license     GNU General Public License version 3 or later; see LICENSE
+ */
+.header-content h1 {
+	text-transform: none;
+}
+#scrollUp {
+	background-image: url("../images/top.png");
+}
+section#testimonial-area {
+	margin-top: 50px;
+}
+#section4 {
+	margin-top: 50px;
+}
+
+/* Equal height blocks */
+.equal {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row wrap;
+}
+/*
+@media (min-width: 768px) {
+	.row.equal {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+	}
+}
+ */
+.blog-content {
+	height: 100%;
+}
+.blog-content p {
+	padding: 0;
+}
+.blog-content .feature-content-description {
+	padding: 0 20px 35px;
+}
+
+.feature-content {
+	flex: 1;
+	height: 100%;
+}
+.testimonial-content {
+	height: 500px;
+}
+.testimonial-content p {
+	padding: 0;
+}
+.testimonial-content .feature-content-description {
+	padding: 0 20px 35px;
+}
+.testimonial-content .content-link {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 45%;
+}
+
+.row-margin-2 {
+	margin-top: 2em;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.10" type="template" client="site" method="upgrade">
+	<name>bigtownwalk</name>
+	<creationDate>##DATE##</creationDate>
+	<copyright>Copyright (C) ##YEAR## Davenport Technology Services. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Chris Davenport</author>
+	<authorEmail>chris.davenport@davenporttechnology.com</authorEmail>
+	<authorUrl>https://www.davenporttechnology.com</authorUrl>
+	<version>##VERSION##</version>
+	<description>TPL_BIGTOWNWALK_XML_DESCRIPTION</description>
+
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</files>
+
+	<positions>
+		<position>above-content</position>
+		<position>content-footer</position>
+		<position>debug</position>
+		<position>footer</position>
+		<position>hp-one</position>
+		<position>hp-two</position>
+		<position>main</position>
+		<position>right</position>
+		<position>topright</position>
+		<position>trailer</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_bigtownwalk.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_bigtownwalk.sys.ini</language>
+	</languages>
+
+</extension>

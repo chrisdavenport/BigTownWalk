@@ -33,6 +33,7 @@ final class BigtownwalkModelWalks extends ListModel
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
+				'ordering', 'a.ordering',
 				'state', 'a.state',
 				'title', 'a.title',
 				'access', 'a.access', 'access_level',
@@ -55,6 +56,9 @@ final class BigtownwalkModelWalks extends ListModel
 	protected function getListQuery()
 	{
 		$db = $this->getDbo();
+
+		$orderCol  = $this->getState('list.ordering', 'a.id');
+		$orderDirn = $this->getState('list.direction', 'DESC');
 
 		// Construct base query.
 		$query = $db->getQuery(true)
@@ -111,9 +115,10 @@ final class BigtownwalkModelWalks extends ListModel
 		}
 
 		// Add the list ordering clause.
-		$orderCol = $this->state->get('list.ordering', 'a.id');
-		$orderDirn = $this->state->get('list.direction', 'DESC');
-		$query->order($db->escape($orderCol . ' ' . $orderDirn));
+		if ($orderCol && $orderDirn)
+		{
+			$query->order($db->escape($orderCol . ' ' . $orderDirn));
+		}
 
 		return $query;
 	}
