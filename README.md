@@ -136,7 +136,7 @@ Then run the following command:
 vendor/bin/phpcs --report=full \
  --extensions=php -p \
  --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Joomla \
- --ignore=*/tmpl/*,*/layouts/*,*/vendor/* src
+ --ignore=*/tmpl/*,*/layouts/*,*/vendor/*,*/html/modules.php src
 ```
 
 The Dockerfile used to create the chrisdavenport/joomla-code-style image is included in case the source ever goes missing.

@@ -24,7 +24,7 @@ jobs:
           --report=full \
           --extensions=php -p \
           --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Joomla \
-          --ignore=*/tmpl/*,*/layouts/*,*/vendor/* src
+          --ignore=*/tmpl/*,*/layouts/*,*/vendor/*,*/html/modules.php src
       - name: Run namespace check
         run: vendor/bin/robo run:namespace
       - run: echo "Completed with status ${{ job.status }}."
