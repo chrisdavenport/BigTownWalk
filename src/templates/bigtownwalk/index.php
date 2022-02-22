@@ -15,7 +15,7 @@ use Joomla\CMS\Document\HtmlDocument;
 use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 
-/** @var HtmlDocument $this */
+/** @var   HtmlDocument  $this */
 
 $app  = Factory::getApplication();
 $user = Factory::getUser();
@@ -121,71 +121,81 @@ $homePage = $menu->getActive() === $menu->getDefault();
 		</header>
 	</div>
 
-	<div id="section2">
-		<!-- Start Feature Area - Three blocks in a row. -->
-		<section id="feature-area" class="about-section">
-			<div class="container">
-				<div class="row mb-4 text-center inner">
-					<jdoc:include type="modules" name="home-section-2" style="col3" />
+	<?php if ($homePage) { ?>
+		<div id="section2">
+			<!-- Start Feature Area - Three blocks in a row. -->
+			<section id="feature-area" class="about-section">
+				<div class="container">
+					<div class="row mb-4 text-center inner">
+						<jdoc:include type="modules" name="home-section-2" style="col3" />
+					</div>
 				</div>
-			</div>
-		</section>
-		<!-- End Feature Area -->
+			</section>
+			<!-- End Feature Area -->
 
-		<!-- Start Blog Area - Two large blocks in a row. -->
-		<section id="blog-area">
-			<div class="container">
-				<div class="row mb-4 text-center inner equal">
-					<jdoc:include type="modules" name="home-section-2b" style="col2" />
+			<!-- Start Blog Area - Two large blocks in a row. -->
+			<section id="blog-area">
+				<div class="container">
+					<div class="row mb-4 text-center inner equal">
+						<jdoc:include type="modules" name="home-section-2b" style="col2" />
+					</div>
 				</div>
-			</div>
-		</section>
-		<!-- End Blog Area -->
-	</div>
+			</section>
+			<!-- End Blog Area -->
+		</div>
 
-	<div id="section3">
-		<!-- Start Services Area - Parallax background. -->
-		<section id="services-area" class="services-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center inner our-service">
-						<div class="service">
-							<h1>The Walks</h1>
-							<p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
-								felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
-								Etiam a mi quis arcu varius condimentum.
-							</p>
+		<div id="section3">
+			<!-- Start Services Area - Parallax background. -->
+			<section id="services-area" class="services-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center inner our-service">
+							<div class="service">
+								<h1>The Walks</h1>
+								<p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
+									felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
+									Etiam a mi quis arcu varius condimentum.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- End Services Area -->
+			</section>
+			<!-- End Services Area -->
 
-		<!-- Start Walks Area - Three blocks in a row. -->
+			<!-- Start Walks Area - Three blocks in a row. -->
+			<section id="walks-area" class="walks-section">
+				<div class="container">
+					<jdoc:include type="modules" name="bigtownwalks" style="none" />
+				</div>
+			</section>
+			<!-- End Walks Area -->
+
+			<!-- Start Testimonial Area -->
+			<section id="testimonial-area">
+				<div class="container">
+					<!-- Four blocks in a row. -->
+					<div class="row mb-4 text-center inner equal">
+						<jdoc:include type="modules" name="home-section-3" style="col4" />
+					</div>
+
+					<!-- One block in a row. -->
+					<div class="row">
+						<jdoc:include type="modules" name="home-section-4" style="col1" />
+					</div>
+				</div>
+			</section>
+			<!-- End Testimonial Area -->
+		</div>
+	<?php } else { ?>
+		<!-- Start component area. -->
 		<section id="walks-area" class="walks-section">
 			<div class="container">
-				<jdoc:include type="modules" name="bigtownwalks" style="none" />
+				<jdoc:include type="component" />
 			</div>
 		</section>
-		<!-- End Walks Area -->
-
-		<!-- Start Testimonial Area -->
-		<section id="testimonial-area">
-			<div class="container">
-				<!-- Four blocks in a row. -->
-				<div class="row mb-4 text-center inner equal">
-					<jdoc:include type="modules" name="home-section-3" style="col4" />
-				</div>
-
-				<!-- One block in a row. -->
-				<div class="row">
-					<jdoc:include type="modules" name="home-section-4" style="col1" />
-				</div>
-			</div>
-		</section>
-		<!-- End Testimonial Area -->
-	</div>
+		<!-- End component area -->
+	<?php } ?>
 
 	<div id="section4">
 		<!-- Start Contact Area -->
@@ -259,15 +269,15 @@ $homePage = $menu->getActive() === $menu->getDefault();
 
 			// Parallax
 			$('.intro-section').parallax({
-				imageSrc: 'templates/bigtownwalk/images/bg-1.jpg',
+				imageSrc: '<?php echo $uri; ?>/templates/bigtownwalk/images/bg-1.jpg',
 				speed: 0.2
 			});
 			$('.services-section').parallax({
-				imageSrc: 'templates/bigtownwalk/images/bg-2.jpg',
+				imageSrc: '<?php echo $uri; ?>/templates/bigtownwalk/images/bg-2.jpg',
 				speed: 0.2
 			});
 			$('.contact-section').parallax({
-				imageSrc: 'templates/bigtownwalk/images/bg-3.jpg',
+				imageSrc: '<?php echo $uri; ?>/templates/bigtownwalk/images/bg-3.jpg',
 				speed: 0.2
 			});
 
