@@ -10,10 +10,9 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper;
-
-$chunks = array_chunk(ModBigtownwalksHelper::getWalks(), 3);
+use Joomla\CMS\Language\Text;use Joomla\CMS\Router\Route;
 ?>
-<?php foreach ($chunks as $chunk) { ?>
+<?php foreach (array_chunk(ModBigtownwalksHelper::getWalks(), 3) as $chunk) { ?>
 	<div class="row row-margin-2 text-center inner equal">
 		<?php foreach ($chunk as $walk) { ?>
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-4">
@@ -28,7 +27,12 @@ $chunks = array_chunk(ModBigtownwalksHelper::getWalks(), 3);
 						<?php echo HTMLHelper::_('string.truncateComplex', $walk->description, 150); ?>
 					</p>
 					<p>
-						<a href="#" class="feature-content-link green-btn">Read more...</a>
+						<a
+							href="<?php echo Route::_('index.php?option=com_bigtownwalk&view=walk&id=' . $walk->id); ?>"
+							class="feature-content-link green-btn"
+							>
+							<?php echo Text::_('MOD_BIGTOWNWALKS_READ_MORE'); ?>
+						</a>
 					</p>
 				</div>
 			</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_BIGTOWNWALK_VIEW_SITES_DEFAULT_LABEL" option="View">
+		<message>
+			<![CDATA[COM_BIGTOWNWALK_VIEW_SITES_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>
